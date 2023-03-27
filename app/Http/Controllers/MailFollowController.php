@@ -77,4 +77,11 @@ class MailFollowController extends Controller
 
         return redirect()->route("mail-follow-list");
     }
+
+    public function delete($mail_follow_id)
+    {
+        $mailFollow =  MailFollow::find($mail_follow_id);
+        $mailFollow->delete();
+        return redirect()->route("mail-follow-list");
+    }
 }

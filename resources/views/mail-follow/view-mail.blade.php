@@ -59,11 +59,14 @@
                             <div class="col-8">
 
                                 <div class="row">
-                                    <a class="mx-2" href="{{ url($mailFollow->path ?? '') }}" target="_blank">
-                                        <button type="button" class="btn btn-outline-success">معاينة</button>
+                                    <a class="ml-1" href="{{ url($mailFollow->path ?? '') }}" target="_blank">
+                                        <button type="button" class="btn btn-outline-success btn-sm">معاينة</button>
                                     </a>
-                                    <a class="mx-2" href="{{ route("mail-follow-edit",$mailFollow->id) }}" >
-                                        <button type="button" class="btn btn-outline-warning">تعديل</button>
+                                    <a class="ml-1" href="{{ route('mail-follow-edit', $mailFollow->id) }}">
+                                        <button type="button" class="btn btn-outline-warning btn-sm">تعديل</button>
+                                    </a>
+                                    <a class="ml-1" href="{{ route('mail-follow-delete', $mailFollow->id) }}">
+                                        <button type="button" class="btn btn-outline-danger btn-sm ">خذف</button>
                                     </a>
                                 </div>
                             </div>
