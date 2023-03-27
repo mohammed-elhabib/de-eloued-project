@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string("title");
             $table->string("date");
             $table->string("note");
-            $table->string("path");
+            $table->string("path")->nullable();
             $table->boolean("status")->default(0);
             $table->timestamps();
         });

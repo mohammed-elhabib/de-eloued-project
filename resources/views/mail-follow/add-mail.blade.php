@@ -64,7 +64,7 @@
                             </div>
                             <div class="form-group">
                                 <label>الملف المراسلة</label>
-                                <input type="file" class="form-control" name="file" required />
+                                <input type="file" class="form-control" name="file"  />
                             </div>
                             <button type="submit" class="btn btn-primary">حفظ</button>
                         </form>

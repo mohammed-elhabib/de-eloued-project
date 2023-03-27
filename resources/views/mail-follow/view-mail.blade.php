@@ -72,7 +72,7 @@
                                         'in-progress' => !$mailFollow->status,
                                         'donne' => $mailFollow->status,
                                     ]) id="status">
-                                        <option value="1" @selected($mailFollow->status)>تم معالجته</option>
+                                        <option value="1" @selected($mailFollow->status)>تمت</option>
                                         <option value="0" @selected(!$mailFollow->status)>يتم معالجته</option>
                                     </select>
 
@@ -148,7 +148,7 @@
     <script>
         $('#status').on('change', function() {
 
-            $.get('/sp/mail-follow/change-status/{{ $mailFollow->id }}/' + this.value, function(data) {
+            $.get('/num/sp/mail-follow/change-status/{{ $mailFollow->id }}/' + this.value, function(data) {
                 if (data == "1") {
                     $('#status').removeClass("in-progress");
                     $('#status').addClass("donne");

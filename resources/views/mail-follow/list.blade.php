@@ -73,7 +73,8 @@
                                         <th>المصلحة</th>
                                         <th>عنوان المراسلة</th>
                                         <th>اجال التنفيذ</th>
-                                        <th>احالة</th>
+                                        <th>الملاحطات</th>
+                                        <th>الحالة</th>
                                         <th> </th>
 
                                     </tr>
@@ -87,18 +88,16 @@
                                                 <td>{{ $mailFollow->sourceTarget }}</td>
                                                 <td>{{ $mailFollow->title }}</td>
                                                 <td>{{ $mailFollow->date }}</td>
+                                                <td>{{ $mailFollow->note }}</td>
                                                 @if ($mailFollow->status)
                                                     <td>
                                                         <span class="donne">
-                                                            تم معالجته
-
-
+                                                            تمت
                                                         </span>
                                                     </td>
                                                 @else
                                                     <td>
                                                         <span class="in-progress">
-
                                                             يتم معالجته
                                                         </span>
 
