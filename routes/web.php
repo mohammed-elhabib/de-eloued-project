@@ -33,3 +33,10 @@ Route::prefix('sp')->group(function () {
     Route::get('mail-follow/edit/{mail_follow_id}', [MailFollowController::class, "edit"])->name('mail-follow-edit');
     Route::post('mail-follow/edit/store', [MailFollowController::class, "editStore"])->name('mail-follow-edit-store');
 });
+
+
+Route::prefix('programe')->group(function () {
+    Route::get('/', function () {
+    return view("index");
+    });
+});
