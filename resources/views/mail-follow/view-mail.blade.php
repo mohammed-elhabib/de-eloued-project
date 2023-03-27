@@ -59,7 +59,7 @@
                             <div class="col-8">
 
                                 <div class="row">
-                                    <a class="" href="{{ url($mailFollow->path ?? '') }}" target="_black">
+                                    <a class="" href="{{ url($mailFollow->path ?? '') }}" target="_blank">
                                         <button type="button" class="btn btn-outline-success">معاينة</button>
                                     </a>
 
