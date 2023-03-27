@@ -55,8 +55,8 @@
                         <h6 class="card-title">
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="text" class="form-control"  aria-describedby="emailHelp"
-                                    placeholder="إبحث . . . . . .">
+                                    <input type="text" class="form-control" aria-describedby="emailHelp"
+                                        placeholder="إبحث . . . . . .">
                                 </div>
 
                                 <div class="col-6"></div>
@@ -96,7 +96,8 @@
                                                         </span>
                                                     </td>
                                                 @else
-                                                    <td>
+                                                    <td
+                                                        style="    width: 95px;                                                    ">
                                                         <span class="in-progress">
                                                             يتم معالجته
                                                         </span>
@@ -104,7 +105,8 @@
                                                     </td>
                                                 @endif
                                                 </td>
-                                                <td>
+                                                <td
+                                                    style="    width: 95px;                                                ">
                                                     <a class="view-btn"
                                                         href="{{ route('mail-follow-view', $mailFollow->id) }}"
                                                         target="_black">
