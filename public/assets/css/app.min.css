@@ -5862,7 +5862,7 @@
   .swal-modal input.swal-content__input,
   .custom-select {
     font-size: 0.875rem;
-    border-color: #e1e1e1;
+    border-color: #9c9797;
     border-radius: 0.5rem;
   }
 
@@ -14808,3 +14808,8 @@
     transform: rotate(-135deg);
   }
 
+  .label {
+    font-weight: 600;
+    color: black;
+    padding: 5px
+}

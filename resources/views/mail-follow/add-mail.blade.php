@@ -25,32 +25,32 @@
                         <form method="post" action="{{ route('mail-follow-store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label>رقم المراسلة</label>
+                                <label class="label">رقم المراسلة</label>
                                 <input type="text" class="form-control" name="number" required
                                     aria-describedby="emailHelp" placeholder="رقم المراسلة">
 
                             </div>
                             <div class="form-group">
-                                <label>المصدر</label>
+                                <label class="label">المصدر</label>
                                 <input type="text" class="form-control" name="source" required placeholder="المصدر">
                             </div>
                             <div class="form-group">
-                                <label>المصلحة</label>
+                                <label class="label">المصلحة</label>
                                 <input type="text" class="form-control" name="sourceTarget" required
                                     placeholder="المصلحة">
                             </div>
                             <div class="form-group">
-                                <label>عنوان المراسلة</label>
+                                <label class="label">عنوان المراسلة</label>
                                 <textarea class="form-control" name="title" required placeholder="عنوان المراسلة"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>اجال التنفيذ</label>
+                                <label class="label">اجال التنفيذ</label>
                                 <input type="date" class="form-control" name="date" required
                                     placeholder="اجال التنفيذ">
                             </div>
 
                             <div class="form-group">
-                                <label>مصالح والمكاتب المعنية</label>
+                                <label class="label">مصالح والمكاتب المعنية</label>
                                 <select class="select2-example"  name="targets[]">
                                     @foreach ($actors as $actor)
                                         <option value="{{ $actor->id }}">{{ $actor->name }}</option>
@@ -59,11 +59,11 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>ملاحظات</label>
+                                <label class="label">ملاحظات</label>
                                 <textarea class="form-control" name="note" required placeholder="ملاحظات"></textarea>
                             </div>
                             <div class="form-group">
-                                <label>الملف المراسلة</label>
+                                <label class="label">الملف المراسلة</label>
                                 <input type="file" class="form-control" name="file"  />
                             </div>
                             <button type="submit" class="btn btn-primary">حفظ</button>

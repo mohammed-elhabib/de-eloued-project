@@ -38,17 +38,6 @@
     <div class="page-header">
         <div class="container-fluid d-sm-flex justify-content-between">
             <h4>البريد المتابعة</h4>
-            <!--     <nav aria-label="breadcrumb">
-                                                                                                                                <ol class="breadcrumb">
-                                                                                                                                    <li class="breadcrumb-item">
-                                                                                                                                        <a href="#">Dashboard</a>
-                                                                                                                                    </li>
-                                                                                                                                    <li class="breadcrumb-item">
-                                                                                                                                        <a href="#">Tables</a>
-                                                                                                                                    </li>
-                                                                                                                                    <li class="breadcrumb-item active" aria-current="page">Responsive Tables</li>
-                                                                                                                                </ol>
-                                                                                                                            </nav>-->
             <a href="{{ route('mail-follow-add') }}" type="button" class="btn btn-success" style="color: white;">إضافة
                 مراسلة</a>
 
@@ -63,9 +52,20 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <h6 class="card-title">Basic</h6>
+                        <h6 class="card-title">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control"  aria-describedby="emailHelp"
+                                    placeholder="إبحث . . . . . .">
+                                </div>
+
+                                <div class="col-6"></div>
+                            </div>
+
+                        </h6>
                         <div class="table-responsive">
-                            <table class="table table-striped table-bordered">
+                            <table class="table table-striped table-bordered"
+                                style="    font-size: 12px;                            ">
                                 <thead>
                                     <tr>
                                         <th>رقم المراسلة</th>
