@@ -68,10 +68,10 @@
                                 style="    font-size: 12px;                            ">
                                 <thead>
                                     <tr>
-                                        <th>رقم المراسلة</th>
+                                        <th>رقم </th>
                                         <th>المصدر</th>
-                                        <th>عنوان المراسلة</th>
-                                        <th>اجال التنفيذ</th>
+                                        <th>العنوان </th>
+                                        <th>الأجل</th>
                                         <th>الملاحطات</th>
                                         <th>الحالة</th>
                                         <th> </th>
@@ -85,7 +85,7 @@
                                                 <td>{{ $mailFollow->number }}</td>
                                                 <td>{{ $mailFollow->source }} -> {{ $mailFollow->sourceTarget }}</td>
                                                 <td>{{ $mailFollow->title }}</td>
-                                                <td>{{ $mailFollow->date }}</td>
+                                                <td  style="    width: 95px;  "">{{ $mailFollow->date }}</td>
                                                 <td>{{ $mailFollow->note }}</td>
                                                 @if ($mailFollow->status)
                                                     <td>
