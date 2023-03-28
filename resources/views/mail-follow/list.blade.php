@@ -85,7 +85,7 @@
                                                 <td>{{ $mailFollow->number }}</td>
                                                 <td>{{ $mailFollow->source }} -> {{ $mailFollow->sourceTarget }}</td>
                                                 <td>{{ $mailFollow->title }}</td>
-                                                <td  style="    width: 95px;  "">{{ $mailFollow->date }}</td>
+                                                <td  style="    width: 100px;  "">{{ $mailFollow->date }}</td>
                                                 <td>{{ $mailFollow->note }}</td>
                                                 @if ($mailFollow->status)
                                                     <td>
