@@ -17,7 +17,7 @@ class MailFollowController extends Controller
     }
     public function add()
     {
-        $actors = Actor::sortBy("date","desc")->all();
+        $actors = Actor::sortBy("date","asc")->all();
 
         return view("mail-follow.add-mail", ["actors" => $actors]);
     }
