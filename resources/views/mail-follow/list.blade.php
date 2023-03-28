@@ -21,6 +21,10 @@
             color: green;
         }
 
+        .mail-donne {
+            color: green;
+        }
+
         .in-progress {
             font-weight: 600;
             border: 1px solid red;
@@ -68,7 +72,7 @@
                                 style="    font-size: 12px;                            ">
                                 <thead>
                                     <tr>
-                                        <th>رقم </th>
+                                        <th>الرقم </th>
                                         <th>المصدر</th>
                                         <th>العنوان </th>
                                         <th>الأجل</th>
@@ -81,11 +85,11 @@
                                 <tbody>
                                     @if ($mailFollows->count())
                                         @foreach ($mailFollows as $mailFollow)
-                                            <tr>
+                                            <tr @class(['mail-donne'=>$mailFollow->status])>
                                                 <td>{{ $mailFollow->number }}</td>
                                                 <td>{{ $mailFollow->source }} -> {{ $mailFollow->sourceTarget }}</td>
                                                 <td>{{ $mailFollow->title }}</td>
-                                                <td  style="    width: 100px;  "">{{ $mailFollow->date }}</td>
+                                                <td style="    width: 100px;  "">{{ $mailFollow->date }}</td>
                                                 <td>{{ $mailFollow->note }}</td>
                                                 @if ($mailFollow->status)
                                                     <td>
