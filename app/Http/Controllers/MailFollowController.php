@@ -12,7 +12,7 @@ class MailFollowController extends Controller
 
     public function list()
     {
-        $mailFollows = MailFollow::orderBy("date","asc")->all();
+        $mailFollows = MailFollow::orderBy("date","asc")->get();
         return view("mail-follow.list", ["mailFollows" => $mailFollows]);
     }
     public function add()
