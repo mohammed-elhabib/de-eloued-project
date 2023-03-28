@@ -70,7 +70,6 @@
                                     <tr>
                                         <th>رقم المراسلة</th>
                                         <th>المصدر</th>
-                                        <th>المصلحة</th>
                                         <th>عنوان المراسلة</th>
                                         <th>اجال التنفيذ</th>
                                         <th>الملاحطات</th>
@@ -84,8 +83,7 @@
                                         @foreach ($mailFollows as $mailFollow)
                                             <tr>
                                                 <td>{{ $mailFollow->number }}</td>
-                                                <td>{{ $mailFollow->source }}</td>
-                                                <td>{{ $mailFollow->sourceTarget }}</td>
+                                                <td>{{ $mailFollow->source }} -> {{ $mailFollow->sourceTarget }}</td>
                                                 <td>{{ $mailFollow->title }}</td>
                                                 <td>{{ $mailFollow->date }}</td>
                                                 <td>{{ $mailFollow->note }}</td>
