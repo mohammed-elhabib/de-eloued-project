@@ -97,7 +97,7 @@
                                                     </td>
                                                 @else
                                                     <td
-                                                        style="    width: 95px;                                                    ">
+                                                        style="    width: 107px;                                                    ">
                                                         <span class="in-progress">
                                                             يتم معالجته
                                                         </span>
