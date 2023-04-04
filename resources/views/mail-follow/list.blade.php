@@ -59,7 +59,7 @@
                         <h6 class="card-title">
                             <div class="row">
                                 <div class="col-6">
-                                    <input type="text" class="form-control" aria-describedby="emailHelp"
+                                    <input  type="text" class="form-control" aria-describedby="emailHelp"
                                         placeholder="إبحث . . . . . .">
                                 </div>
 
