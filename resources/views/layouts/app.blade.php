@@ -565,7 +565,9 @@
                         <ul>
                             <li class="navigation-divider">الامانة الخاصة</li>
                             <li><a @if (!request()->segment(1) || (request()->segment(1) == 'sp' && request()->segment(3) == 'list')) class="active" @endif
-                                    href="{{ route('mail-follow-list') }}">متابعة المراسلات</a></li>
+                                href="{{ route('mail-follow-list') }}">متابعة المراسلات</a></li>
+                                <li><a @if (!request()->segment(1) || (request()->segment(1) == 'sp' && request()->segment(3) == 'archived-list')) class="active" @endif
+                                    href="{{ route('archived-mail-follow-list') }}">ارشيف المراسلات</a></li>
                             <li><a @if (!request()->segment(1) || (request()->segment(1) == 'sp' && request()->segment(3) == 'add')) class="active" @endif
                                     href="{{ route('mail-follow-add') }}"> مراسلة جديدة</a></li>
 

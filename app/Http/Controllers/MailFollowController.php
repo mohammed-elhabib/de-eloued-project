@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Actor;
 use App\Models\MailFollow;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class MailFollowController extends Controller
 {
@@ -12,7 +13,22 @@ class MailFollowController extends Controller
 
     public function list()
     {
-        $mailFollows = MailFollow::orderBy("date","asc")->get();
+        $mailFollows = MailFollow::where("archived", false)->orderBy("date", "asc")->get();
+        $removed_keys = [];
+        foreach ($mailFollows as $key => $mailFollow) {
+            $start =   Carbon::parse($mailFollow->date);
+            $end =   Carbon::now();
+            if ($end->diffInHours($start) > 48 && $mailFollow->status) {
+                $mailFollow->archived = true;
+                $mailFollow->save();
+                array_push($removed_keys, $mailFollow->id);
+            }
+        }
+        return view("mail-follow.list", ["mailFollows" => $mailFollows->except($removed_keys)]);
+    }
+    public function archivedList()
+    {
+        $mailFollows = MailFollow::where("archived", true)->orderBy("date", "asc")->get();
         return view("mail-follow.list", ["mailFollows" => $mailFollows]);
     }
     public function add()

@@ -24,4 +24,5 @@ class MailFollow extends Model
 
         return $this->belongsToMany(Actor::class, "mail_follows_actors");
     }
+
 }
