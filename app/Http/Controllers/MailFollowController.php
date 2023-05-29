@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\MailFollowExport;
 use App\Models\Actor;
 use App\Models\MailFollow;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Excel;
 
 class MailFollowController extends Controller
 {
@@ -49,6 +51,10 @@ class MailFollowController extends Controller
         $mailFollow->actors()->attach($request->only("targets")["targets"]);
 
         return redirect()->route("mail-follow-list");
+    }
+    public function export()
+    {
+        return   Excel::download(new MailFollowExport, 'mail-follow-'.Carbon::now()->format('Y-m-d').'.xlsx');
     }
 
     public function view($mail_follow_id)

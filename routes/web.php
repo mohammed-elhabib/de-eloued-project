@@ -26,6 +26,7 @@ Route::get('/', function () {
  */
 Route::prefix('sp')->group(function () {
     Route::get('mail-follow/list', [MailFollowController::class, "list"])->name('mail-follow-list');
+    Route::get('mail-follow/export', [MailFollowController::class, "export"])->name('mail-follow-export');
     Route::get('mail-follow/archived-list', [MailFollowController::class, "archivedList"])->name('archived-mail-follow-list');
     Route::get('mail-follow/add', [MailFollowController::class, "add"])->name('mail-follow-add');
     Route::post('mail-follow/store', [MailFollowController::class, "store"])->name('mail-follow-store');

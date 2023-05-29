@@ -24,6 +24,13 @@
         .mail-donne {
             color: green;
         }
+        .export-btn{
+            float: left;
+    border: 1px solid green;
+    background: green;
+    padding: 6px;
+    color: white !important;
+        }
 
         .in-progress {
             font-weight: 600;
@@ -63,7 +70,13 @@
                                         placeholder="إبحث . . . . . .">
                                 </div>
 
-                                <div class="col-6"></div>
+                                <div class="col-6">
+                                    <a class="export-btn"
+                                    href="{{ route('mail-follow-export') }}"
+                                    target="_black">
+                                تصدير EXCEl
+                                </a>
+                                </div>
                             </div>
 
                         </h6>
